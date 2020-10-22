@@ -1,8 +1,10 @@
-# CouchDB Service
+# easy-open-horizon
 
-Based on the official CouchDB Container image on docker hub: https://hub.docker.com/_/couchdb
+An easy way to publish stuff on an open-horizon exchange.
 
-The initial version of this services specifies the COUCHDB_USER and COUCHDB_PASSWORD as parameters.
+If you have an existing Docker container, and you wish to publish it on an open-horizon Exchange, and have open-horizon Agents deploy your container onto selected edge machines, then this is the easiest way to do that -- by far!
+
+Of course, this simple procedure does not cover all possible features of open-horizon (e.g., user input variables) but it should enable you to run most Docker containers in open-horizon with very little effort.
 
 ## Information required
 
