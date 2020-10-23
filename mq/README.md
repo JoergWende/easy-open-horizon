@@ -1,4 +1,4 @@
-# CouchDB Service
+# IBM MQ Advanced for Developers Service
 
 Based on the official IBM MQ Container image on docker hub: https://hub.docker.com/r/ibmcom/mq/
 

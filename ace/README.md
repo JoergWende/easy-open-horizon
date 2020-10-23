@@ -1,4 +1,4 @@
-# CouchDB Service
+# IBM App Connect Enterprise for Developers Service
 
 Based on the official IBM App Connect Enterprise for Developers image on docker hub: https://hub.docker.com/r/ibmcom/ace
 
