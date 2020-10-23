@@ -1,0 +1,37 @@
+{
+  "org": "$HZN_ORG_ID",
+  "label": "$SERVICE_NAME for $ARCH",
+  "url": "$SERVICE_NAME",
+  "version": "$SERVICE_VERSION",
+  "arch": "$ARCH",
+  "public": true,
+  "sharable": "singleton",
+  "requiredServices": [],
+  "userInput": [
+        {
+            "name": "LICENSE",
+            "label": "LICENSE",
+            "type": "string",
+            "defaultValue": "accept"
+        },
+        {
+            "name": "ACE_SERVER_NAME",
+            "label": "ACE_SERVER_NAME",
+            "type": "string",
+            "defaultValue": "ACESERVER"
+        }],
+  "deployment": {
+    "services": {
+      "$SERVICE_NAME": {
+        "image": "$SERVICE_CONTAINER",
+        "ports": [ 
+          { "HostIP": "0.0.0.0", "HostPort": "7600:7600/tcp" },
+          { "HostIP": "0.0.0.0", "HostPort": "7800:7800/tcp" },
+          { "HostIP": "0.0.0.0", "HostPort": "7843:7843/tcp" }
+	],
+        "binds": ["qm1data:/mnt/mqm:rw"]
+      }
+    }
+  }
+}
+

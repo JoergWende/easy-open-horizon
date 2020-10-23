@@ -1,0 +1,44 @@
+{
+  "org": "$HZN_ORG_ID",
+  "label": "$SERVICE_NAME for $ARCH",
+  "url": "$SERVICE_NAME",
+  "version": "$SERVICE_VERSION",
+  "arch": "$ARCH",
+  "public": true,
+  "sharable": "singleton",
+  "requiredServices": [],
+  "userInput": [
+        {
+            "name": "LICENSE",
+            "label": "LICENSE",
+            "type": "string",
+            "defaultValue": "accept"
+        },
+        {
+            "name": "MQ_QMGR",
+            "label": "MQ_QMGR",
+            "type": "string",
+            "defaultValue": "qm1"
+        },
+        {
+            "name": "MQ_ENABLE_METRICS",
+            "label": "MQ_ENABLE_METRICS",
+            "type": "string",
+            "defaultValue": "qm1"
+        }
+        ],
+  "deployment": {
+    "services": {
+      "$SERVICE_NAME": {
+        "image": "$SERVICE_CONTAINER",
+        "ports": [ 
+          { "HostIP": "0.0.0.0", "HostPort": "1414:1414/tcp" },
+          { "HostIP": "0.0.0.0", "HostPort": "9443:9443/tcp" },
+          { "HostIP": "0.0.0.0", "HostPort": "9157:9157/tcp" }
+	],
+        "binds": ["qm1data:/mnt/mqm:rw"]
+      }
+    }
+  }
+}
+
