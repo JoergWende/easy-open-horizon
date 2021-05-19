@@ -1,0 +1,47 @@
+{
+  "org": "$HZN_ORG_ID",
+  "label": "$SERVICE_NAME for $ARCH",
+  "url": "$SERVICE_NAME",
+  "version": "$SERVICE_VERSION",
+  "arch": "$ARCH",
+  "public": true,
+  "sharable": "singleton",
+  "requiredServices": [],
+  "userInput": [
+        {
+            "name": "MYSQL_USER",
+            "label": "MYSQL_USER",
+            "type": "string",
+            "defaultValue": "admin"
+        },
+        {
+            "name": "MYSQL_ROOT_PASSWORD",
+            "label": "MYSQL_ROOT_PASSWORD",
+            "type": "string",
+            "defaultValue": "passw0rd"
+        },
+        {
+            "name": "MYSQL_PASSWORD",
+            "label": "MYSQL_PASSWORD",
+            "type": "string",
+            "defaultValue": "passw0rd"
+        },
+        {
+            "name": "MYSQL_DATABASE",
+            "label": "MYSQL_DATABASE",
+            "type": "string",
+            "defaultValue": "db"
+        }],
+  "deployment": {
+    "services": {
+      "$SERVICE_NAME": {
+        "image": "$SERVICE_CONTAINER",
+        "ports": [ 
+          { "HostIP": "0.0.0.0", "HostPort": "3306:3306/tcp" }
+	],
+        "binds": ["mariadb_data:/var/lib/mysql:rw"]
+      }
+    }
+  }
+}
+
