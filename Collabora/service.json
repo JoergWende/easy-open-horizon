@@ -6,15 +6,13 @@
   "arch": "$ARCH",
   "public": true,
   "sharable": "singleton",
-  "requiredServices": [
-    {
-      "url": "mariadb",
-      "org": "$HZN_ORG_ID",
-      "versionRange": "[0.0.0,INFINITY)",
-      "arch": "$ARCH"
-  }
-  ],
-  "userInput": [],
+  "requiredServices": [],
+  "userInput": [        {
+    "name": "extra_params",
+    "label": "extra_params",
+    "type": "string",
+    "defaultValue": "--o:ssl.enable=false"
+}],
   "deployment": {
     "services": {
       "$SERVICE_NAME": {

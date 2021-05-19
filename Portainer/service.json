@@ -6,21 +6,20 @@
   "arch": "$ARCH",
   "public": true,
   "sharable": "singleton",
-  "requiredServices": [ {
-    "url": "mariadb",
-    "org": "$HZN_ORG_ID",
-    "versionRange": "[0.0.0,INFINITY)",
-    "arch": "$ARCH"
-}],
+  "requiredServices": [],
   "userInput": [],
   "deployment": {
     "services": {
       "$SERVICE_NAME": {
         "image": "$SERVICE_CONTAINER",
+        "privileged": true,
         "ports": [ 
-          { "HostIP": "0.0.0.0", "HostPort": "8088:80/tcp" }
+          { "HostIP": "0.0.0.0", "HostPort": "9000:9000/tcp" },
+          { "HostIP": "0.0.0.0", "HostPort": "8000:8000/tcp" }
 	],
-        "binds": ["NextCloud_data:/var/www/html:rw"]
+        "binds": ["portainer:/data:rw",
+          "/var/run/docker.sock:/var/run/docker.sock:rw"
+        ]
       }
     }
   }
