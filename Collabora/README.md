@@ -1,4 +1,7 @@
-Ref: https://www.collaboraoffice.com/code/quick-tryout-nextcloud-docker/
+# Open Collabora
+## Ref: 
+* https://www.collaboraoffice.com/code/quick-tryout-nextcloud-docker/
+* https://dasnetzundich.de/2020/10/06/collabora-code-auf-einem-linux-server-installieren/
 # easy-open-horizon
 
 An easy way to publish stuff on an open-horizon exchange.
