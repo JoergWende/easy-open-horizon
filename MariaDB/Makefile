@@ -13,7 +13,7 @@ PATTERN_NAME:="pattern-mariadb"
 SERVICE_NAME:="mariadb"
 SERVICE_VERSION:="10.6.0"
 SERVICE_CONTAINER:="mariadb:10.6.0"
-ARCH:="arm"
+ARCH:="amd64"
 
 publish-service: validate-org
 	@ARCH=$(ARCH) \

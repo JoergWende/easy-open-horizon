@@ -13,7 +13,7 @@ PATTERN_NAME:="pattern-mariadb"
 SERVICE_NAME:="mariadb"
 SERVICE_VERSION:="10.5.0"
 SERVICE_CONTAINER:="tobi312/rpi-mariadb:10.5"
-ARCH:="amd64"
+ARCH:="arm"
 
 publish-service: validate-org
 	@ARCH=$(ARCH) \
