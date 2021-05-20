@@ -9,11 +9,11 @@
 # ARCH              - an open-horizon architecture (see `hzn architecture`)
 #
 
-PATTERN_NAME:="pattern-mariadb"
-SERVICE_NAME:="mariadb"
-SERVICE_VERSION:="10.5.9"
-SERVICE_CONTAINER:="linuxserver/mariadb"
-ARCH:="arm"
+PATTERN_NAME:="pattern-mqtt"
+SERVICE_NAME:="mqtt"
+SERVICE_VERSION:="2.0.10"
+SERVICE_CONTAINER:="eclipse-mosquitto:2-openssl"
+ARCH:="amd64"
 
 publish-service: validate-org
 	@ARCH=$(ARCH) \
