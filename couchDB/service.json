@@ -27,7 +27,7 @@
         "ports": [ 
           { "HostIP": "0.0.0.0", "HostPort": "5984:5984/tcp" }
 	],
-        "binds": ["couchdb_data:/opt/couchdb/data:rw"]
+        "binds": ["/var/openhorizon_data/couchdb_data:/opt/couchdb/data:rw"]
       }
     }
   }

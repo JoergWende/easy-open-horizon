@@ -39,7 +39,7 @@
         "ports": [ 
           { "HostIP": "0.0.0.0", "HostPort": "3306:3306/tcp" }
 	],
-        "binds": ["mariadb_data:/var/lib/mysql:rw"]
+        "binds": ["/var/openhorizon_data/mariadb_data:/var/lib/mysql:rw"]
       }
     }
   }

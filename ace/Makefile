@@ -11,7 +11,7 @@
 
 PATTERN_NAME:="pattern-ibmace"
 SERVICE_NAME:="ibmace"
-SERVICE_VERSION:="11.0.0.9"
+SERVICE_VERSION:="11.0.9"
 SERVICE_CONTAINER:="ibmcom/ace:11.0.0.9-r2-amd64"
 ARCH:="amd64"
 

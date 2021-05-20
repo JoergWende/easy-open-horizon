@@ -17,7 +17,7 @@
           { "HostIP": "0.0.0.0", "HostPort": "9000:9000/tcp" },
           { "HostIP": "0.0.0.0", "HostPort": "8000:8000/tcp" }
 	],
-        "binds": ["portainer:/data:rw",
+        "binds": ["/var/openhorizon_data/portainer:/data:rw",
           "/var/run/docker.sock:/var/run/docker.sock:rw"
         ]
       }

@@ -20,7 +20,7 @@
         "ports": [ 
           { "HostIP": "0.0.0.0", "HostPort": "8088:80/tcp" }
 	],
-        "binds": ["NextCloud_data:/var/www/html:rw"]
+        "binds": ["/var/openhorizon_data/NextCloud_data:/var/www/html:rw"]
       }
     }
   }

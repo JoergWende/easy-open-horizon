@@ -36,7 +36,7 @@
           { "HostIP": "0.0.0.0", "HostPort": "9443:9443/tcp" },
           { "HostIP": "0.0.0.0", "HostPort": "9157:9157/tcp" }
 	],
-        "binds": ["qm1data:/mnt/mqm:rw"]
+        "binds": ["/var/openhorizon_data/qm1data:/mnt/mqm:rw"]
       }
     }
   }

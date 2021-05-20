@@ -15,7 +15,7 @@
         "ports": [ 
           { "HostIP": "0.0.0.0", "HostPort": "1880:1880/tcp" }
 	],
-        "binds": ["nodered_data:/data:rw"]
+        "binds": ["/var/openhorizon_data/nodered_data:/data:rw"]
       }
     }
   }

@@ -29,7 +29,7 @@
           { "HostIP": "0.0.0.0", "HostPort": "7800:7800/tcp" },
           { "HostIP": "0.0.0.0", "HostPort": "7843:7843/tcp" }
 	],
-        "binds": ["qm1data:/mnt/mqm:rw"]
+        "binds": ["/var/openhorizon_data/ace_data:/home/aceuser/ace-server:rw"]
       }
     }
   }
